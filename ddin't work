@@ -1,0 +1,21 @@
+When i tried this, I got the error ↓
+
+WARNING: Could not send HEAD request to https://dl01.twitcasting.tv/tc.vod/v/691671375.0.2-1626122266-1626151066-990fec1f-ff6da205d66ad7a6/fmp4/index.m3u8: HTTP Error 502: Bad Gateway
+[generic] index: Downloading webpage
+ERROR: Unable to download webpage: HTTP Error 502: Bad Gateway (caused by HTTPError()); please report this issue on https://yt-dl.org/bug . Make sure you are using the latest version; type  youtube-dl -U  to update. Be sure to call youtube-dl with the --verbose flag and include its complete output.
++↓
+[https @ 000001a2cae266c0] HTTP error 502 Bad Gateway
+https://dl01.twitcasting.tv/tc.vod/v/691671375.0.2-1626122266-1626151066-990fec1f-ff6da205d66ad7a6/fmp4/index.m3u8: Server returned 5XX Server Error reply
+
+
+
+this is what i inputed to cmd in the file with ffmpeg ↓
+ffmpeg.exe -protocol_whitelist file,http,https,tcp,tls,crypto -user_agent "Chrome/91.0.4472.124" -headers "Origin: https://twitcasting.tv" -i https://dl01.twitcasting.tv/tc.vod/v/691671375.0.2-1626122266-1626151066-990fec1f-ff6da205d66ad7a6/fmp4/index.m3u8 -c copy thisfile.mkv
+
+the video i attempted to download was this one ↓
+https://twitcasting.tv/tomoe_shirayuki/movie/691671375
+https://dl01.twitcasting.tv/tc.vod/v/691671375.0.2-1626122266-1626151066-990fec1f-ff6da205d66ad7a6/fmp4/index.m3u8
+
+hope this was what you meant by "Please open an issue on this GitHub repo, since it's probably the best way of getting in contact with me." 
+
+kind regards svenni <3
